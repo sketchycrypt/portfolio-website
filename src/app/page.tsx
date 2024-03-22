@@ -1,7 +1,11 @@
-import { redirect } from "next/dist/server/api-utils";
+'use client'
 import Image from "next/image";
 import Link from "next/link";
-import background from './images/bg.png'
+import background from "./images/bg.png";
+import {
+  MouseParallaxContainer,
+  MouseParallaxChild,
+} from "react-parallax-mouse";
 
 export default function Home() {
   const hoverEffect =
@@ -9,16 +13,24 @@ export default function Home() {
 
   return (
     <main>
-      <div className="fixed inset-0 z-0 w-full bg-no-repeat bg-cover opacity-25">
-      <Image src={background} alt="bg"></Image>
-      </div>
+      <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
+        <div
+          id="bg-container"
+          className="fixed inset-0 z-0 w-120 bgWidth -ml-8 bg-no-repeat bg-cover opacity-45 blur-sm"
+        >
+          <MouseParallaxChild factorX={0.3} factorY={0.3}>
+          <Image id="bg-image" src={background} alt="bg"></Image>
+          </MouseParallaxChild>
+        </div>
+      </MouseParallaxContainer>
+
       <div className="flex flex-col items-center justify-center h-screen">
-        <div className="hover:scale-110 transition ease-in-out duration-150 z-10 p-8 on">
+        <div className="hover:cursor-pointer hover:scale-110 transition ease-in-out duration-150 z-10 p-8 on">
           <Link href="https://twitter.com/sketchygfx__">
             <Image
               src="https://cdn.discordapp.com/avatars/639485103000518701/bd393353b97a76a0823b3aa00b59473b.png?size=1024"
               alt="Profile Picture"
-              className="rounded-full border-solid border-2 border-spacing-4 border-sky-300"
+              className="rounded-full border-solid border-4 border-sky-500"
               width={128}
               height={128}
             />
@@ -43,9 +55,6 @@ export default function Home() {
           &lt;3
         </div>
       </Link>
-
-    
-
     </main>
   );
 }
