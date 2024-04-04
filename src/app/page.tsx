@@ -2,13 +2,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import background from "./images/bg.png";
+import avatarUrl from "./avatar";
 import {
   MouseParallaxContainer,
   MouseParallaxChild,
 } from "react-parallax-mouse";
-
+import React, {useState, useEffect } from "react";
 
 export default function Home() {
+  const [avatar, setAvatar] = useState<string | null>(null);
+
+  useEffect(() => {
+    avatarUrl().then(url => setAvatar(url));
+  }, []);
   const hoverEffect =
     "opacity-25 hover:opacity-100 hover:transition ease-in-out duration-150";
 
@@ -20,7 +26,7 @@ export default function Home() {
           className="fixed inset-0 z-0 w-full scale-150 bg-no-repeat bg-cover opacity-45 blur-sm sm:w-1/2 md:w-2/3 lg:w-3/4 xl:w-4/5 2xl:w-5/6"
         >
           <MouseParallaxChild factorX={0.3} factorY={0.3}>
-            <Image id="bg-image" src={background} alt="bg"></Image>
+            <Image id="bg-image" src={background} alt="bg" priority={true}></Image>
           </MouseParallaxChild>
         </div>
       </MouseParallaxContainer>
@@ -28,13 +34,17 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="hover:cursor-pointer hover:scale-110 transition ease-in-out duration-150 z-10 p-8 on">
           <Link href="https://twitter.com/sketchygfx__">
-            <Image
-              src="https://cdn.discordapp.com/avatars/639485103000518701/bd393353b97a76a0823b3aa00b59473b.png?size=1024"
-              alt="Profile Picture"
-              className="rounded-full border-solid border-4 border-white"
-              width={128}
-              height={128}
-            />
+          {avatar ? (
+              <Image
+                src={avatar}
+                alt="Profile Picture"
+                className="rounded-full border-solid border-4 border-white"
+                width={128}
+                height={128}
+              />
+            ) : (
+              <p></p>
+            )}
           </Link>
           <h1 className="font-bold font-inter text-4xl text-center">skxtch</h1>
         </div>
