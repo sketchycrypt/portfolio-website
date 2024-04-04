@@ -72,7 +72,7 @@ export default function Home() {
         </div>
       </div>
       <Link href="https://google.com">
-        <div id="credits" className="invisible sm:visible scale-75 fixed bottom-0 right-0 md:m-2 text-sm text-gray-600 text-right font-inter dark:text-white animate-pulse md:scale-100">
+        <div id="credits" className="invisible md:visible scale-75 fixed bottom-0 right-0 md:m-2 text-sm text-gray-600 text-right font-inter dark:text-white animate-pulse md:scale-100">
           made by skxtch with nextjs + tailwindcss
           <br />
           &lt;3
