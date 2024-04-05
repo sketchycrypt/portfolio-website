@@ -3,33 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import background from "./images/bg.png";
 import avatarUrl from "./avatar";
-import {
-  MouseParallaxContainer,
-  MouseParallaxChild,
-} from "react-parallax-mouse";
 import React, { useState, useEffect } from "react";
 
 export default function Home() {
   const [avatar, setAvatar] = useState<string | null>(null);
 
-  const [creditsText, setCreditsText] = useState<string>('made by skxtch with nextjs + tailwindcss');
+  const [creditsText, setCreditsText] = useState<string>(
+    "made by skxtch with nextjs + tailwindcss"
+  );
 
   useEffect(() => {
     avatarUrl().then((url) => setAvatar(url));
-
-    const updateCreditsText = () => {
-      if (window.innerWidth <= 768) { // Assuming 768px is the breakpoint for mobile
-        setCreditsText('&lt;3');
-      } else {
-        setCreditsText('made by skxtch with nextjs + tailwindcss');
-      }
-    };
-
-    updateCreditsText(); // Initial check
-    window.addEventListener('resize', updateCreditsText);
-
-    return () => window.removeEventListener('resize', updateCreditsText);
-
   }, []);
   const hoverEffect =
     "opacity-25 hover:opacity-100 hover:transition ease-in-out duration-150";
@@ -37,11 +21,16 @@ export default function Home() {
   return (
     <main>
       <div
- id="bg-container"
- className="fixed z-0 w-full h-screen bg-no-repeat bg-center bg-cover opacity-45 blur-sm md:h-full"
->
-<Image id="bg-image" src={background} alt="bg" priority={true} layout="fill" objectFit="cover"></Image>
-</div>
+        id="bg-container"
+        className="fixed z-0 w-full h-screen bg-no-repeat bg-center bg-cover opacity-45 blur-sm md:h-full">
+        <Image
+          id="bg-image"
+          src={background}
+          alt="bg"
+          priority={true}
+          layout="fill"
+          objectFit="cover"></Image>
+      </div>
 
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="hover:cursor-pointer hover:scale-110 transition ease-in-out duration-150 z-10 p-8 on">
@@ -71,18 +60,37 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Link href="https://google.com">
-        <div id="credits" className="invisible md:visible scale-75 fixed bottom-0 right-0 md:m-2 text-sm text-gray-600 text-right font-inter dark:text-white animate-pulse md:scale-100">
+      <Link href="https://tailwindcss.com/docs/guides/nextjs">
+        <div
+          id="credits"
+          className="invisible md:visible scale-75 fixed bottom-0 right-0 md:m-2 text-sm text-gray-600 text-right font-inter dark:text-white animate-pulse md:scale-100">
           made by skxtch with nextjs + tailwindcss
           <br />
           &lt;3
         </div>
       </Link>
-      <Link href="https://github.com/sketchycrypt/">
-        <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-8 text-2xl font-inter font-bold text-gray-300 text-center hover:scale-110 transition ease-in-out duration-150">
-          github
-        </div>
-      </Link>
+      <div className="fixed top-0 w-full flex justify-center items-end text-2xl font-inter font-bold text-gray-300 text-center">
+        <Link href="../">
+          <div className="m-8 hover:scale-110 transition ease-in-out duration-150">
+            home
+          </div>
+        </Link>
+        <Link href="https://github.com/sketchycrypt">
+          <div className="m-8 hover:scale-110 transition ease-in-out duration-150">
+            github
+          </div>
+        </Link>
+        <Link href="/projects">
+          <div className="m-8 hover:scale-110 transition ease-in-out duration-150">
+            projects
+          </div>
+        </Link>
+        <Link href="##">
+          <div className="m-8 hover:scale-110 transition ease-in-out duration-150">
+            socials
+          </div>
+        </Link>
+      </div>
     </main>
   );
 }
