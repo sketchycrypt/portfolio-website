@@ -4,6 +4,7 @@ import Link from "next/link";
 import background from "../images/bg.png";
 import avatarUrl from "../avatar";
 import React, { useState, useEffect } from "react";
+import GitHubProjectsGrid from "./githubprojectsgrid";
 
 export default function Home() {
   const [avatar, setAvatar] = useState<string | null>(null);
@@ -33,15 +34,14 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col items-center justify-center h-screen">
-        <div className="flex flex-col items-center justify-center hover:transition ease-in-out duration-150 z-20">
-          <div className="font-inter font-medium text-2xl text-center md:text-4xl">
-            <h1 className={hoverEffect}>
-              here are some of <br/> my projects
-              <br />
-            </h1>
+        <div className="hover:transition ease-in-out duration-150 z-10">
+          {/* Wrap the GitHubProjectsGrid in a div to align it with the text */}
+          <div className="flex flex-col items-start justify-center h-screen">
+            <GitHubProjectsGrid />
           </div>
         </div>
       </div>
+
       <Link href="https://tailwindcss.com/docs/guides/nextjs">
         <div
           id="credits"
@@ -51,19 +51,31 @@ export default function Home() {
           &lt;3
         </div>
       </Link>
-      <div className="fixed top-0 w-full flex justify-center items-end text-2xl font-inter font-bold text-gray-300 text-center">
+      
+      <div id="navigation-bar" className="md:text-2xl fixed top-0 w-full flex justify-center items-end text-xl font-inter font-bold text-gray-300 text-center">
         <Link href="../">
-          <div className="m-8 hover:scale-110 transition ease-in-out duration-150">home</div>
+          <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150">
+            home
+          </div>
         </Link>
-        <Link href="https://github.com/sketchycrypt">
-          <div className="m-8 hover:scale-110 transition ease-in-out duration-150">github</div>
+        <Link legacyBehavior href="https://github.com/sketchycrypt">
+          <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150">
+            github
+          </div>
         </Link>
-        <Link href="/projects">
-          <div className="m-8 hover:scale-110 transition ease-in-out duration-150">projects</div>
+        <Link legacyBehavior href="#">
+          <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150">
+            projects
+          </div>
         </Link>
-        <Link href="##">
-          <div className="m-8 hover:scale-110 transition ease-in-out duration-150">socials</div>
-        </Link>
+
+
+
+        <div
+          className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150"
+          onClick={() => alert("Not done yet")}>
+          socials
+        </div>
       </div>
     </main>
   );

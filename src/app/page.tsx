@@ -69,27 +69,25 @@ export default function Home() {
           &lt;3
         </div>
       </Link>
-      <div className="fixed top-0 w-full flex justify-center items-end text-2xl font-inter font-bold text-gray-300 text-center">
+      <div className="md:text-2xl fixed top-0 w-full flex justify-center items-end text-xl font-inter font-bold text-gray-300 text-center">
         <Link href="../">
-          <div className="m-8 hover:scale-110 transition ease-in-out duration-150">
+          <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150">
             home
           </div>
         </Link>
         <Link href="https://github.com/sketchycrypt">
-          <div className="m-8 hover:scale-110 transition ease-in-out duration-150">
+          <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150">
             github
           </div>
         </Link>
-        <Link href="/projects">
-          <div className="m-8 hover:scale-110 transition ease-in-out duration-150">
+        <Link href="#">
+          <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150">
             projects
           </div>
         </Link>
-        <Link href="##">
-          <div className="m-8 hover:scale-110 transition ease-in-out duration-150">
+          <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150" onClick={() => alert("Not done yet")}>
             socials
           </div>
-        </Link>
       </div>
     </main>
   );
