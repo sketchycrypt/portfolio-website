@@ -51,8 +51,10 @@ export default function Home() {
           &lt;3
         </div>
       </Link>
-      
-      <div id="navigation-bar" className="md:text-2xl fixed top-0 w-full flex justify-center items-end text-xl font-inter font-bold text-gray-300 text-center">
+
+      <div
+        id="navigation-bar"
+        className="z-20 md:text-2xl fixed top-0 w-full flex justify-center items-end text-xl font-inter font-bold text-gray-300 text-center">
         <Link href="../">
           <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150">
             home
@@ -68,8 +70,6 @@ export default function Home() {
             projects
           </div>
         </Link>
-
-
 
         <div
           className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150"
