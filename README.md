@@ -9,7 +9,7 @@
 
 ## view website
 
-To view the landing page, simply visit 🔗 [the website](https://sketch.anet.moe)
+To view the landing page, simply visit 🔗 [the website](https://skxtch.com)
 
 ## support
 
