@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/portfolio-website',
-    assetPrefix: '/portfolio-website/',
+    basePath: '',
+    assetPrefix: '',
     images: {
       loader: 'default',
       unoptimized: true,
