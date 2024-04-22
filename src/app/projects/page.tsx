@@ -35,7 +35,6 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="hover:transition ease-in-out duration-150 z-10">
-          {/* Wrap the GitHubProjectsGrid in a div to align it with the text */}
           <div className="flex flex-col items-start justify-center h-screen">
             <GitHubProjectsGrid />
           </div>
