@@ -122,7 +122,9 @@ export default function Home() {
             <div className="flex justify-center">
               <button
                 type="button"
-                className="text-white bg-navyblack hover:bg-navyblack/50 transition ease-in-out duration-150 font-medium rounded-full text-2xl px-6 py-3 me-2 mb-2 flex items-center">
+                className="text-white bg-navyblack hover:bg-navyblack/50 transition ease-in-out duration-150 font-medium rounded-full text-2xl px-6 py-3 me-2 mb-2 flex items-center"
+                onClick={() => window.location.href = 'mailto:sketchygfx@hotmail.com'}
+                >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
