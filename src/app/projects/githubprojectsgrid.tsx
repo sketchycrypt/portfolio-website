@@ -40,7 +40,7 @@ const GitHubProjectsGrid: React.FC = () => {
   return (
     <div className="scale-100 md:scale-150 text-center grid grid-cols-2 gap-4 mx-auto my-16">
       {projects.map((project, index) => {
-        console.log(project.icon); // Logs the icon for each project
+        console.log(project.icon);
         return (
           <div
             key={index}
@@ -52,12 +52,12 @@ const GitHubProjectsGrid: React.FC = () => {
                   alt={project.name}
                   width={24}
                   height={24}
-                  className="invert"
+                  className="invert hover:scale-125 transition ease-in-out duration-150"
                 />
               )}
               <a
                 href={project.url}
-                className="text-center text-xl font-bold ml-4">
+                className="text-left text-xl md:text-2xl font-bold ml-4">
                 {project.name}
               </a>
             </div>

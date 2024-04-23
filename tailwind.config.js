@@ -13,7 +13,11 @@ module.exports = {
     fontFamily: {
       inter: ["Inter", "monospace"]
     },
-    extend: {},
+    extend: {
+      colors: {
+        'navyblack': "#242424",
+      }
+    },
   },
   plugins: [],
 }
