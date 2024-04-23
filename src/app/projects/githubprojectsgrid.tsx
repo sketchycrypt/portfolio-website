@@ -15,30 +15,30 @@ interface GitHubProject {
 
 const projects: GitHubProject[] = [
   {
-    name: "Project1",
-    url: "url1",
+    name: "new tab",
+    url: "https://github.com/sketchycrypt/new-tab",
     icon: tailwindIcon,
   },
   {
-    name: "Project2",
-    url: "url2",
+    name: "othello",
+    url: "https://github.com/sketchycrypt/Othello",
     icon: javascriptIcon,
   },
   {
-    name: "Project3",
-    url: "url3",
+    name: "crocrun",
+    url: "https://github.com/sketchycrypt/crocrun",
     icon: typescriptIcon,
   },
   {
-    name: "Project4",
-    url: "url4",
+    name: "portfolio",
+    url: "https://github.com/sketchycrypt/portfolio-website",
     icon: nextdotjsIcon,
   },
 ];
 
 const GitHubProjectsGrid: React.FC = () => {
   return (
-    <div className="scale-125 md:scale-100 text-center grid grid-cols-2 gap-4 mx-auto my-16">
+    <div className="scale-100 md:scale-150 text-center grid grid-cols-2 gap-4 mx-auto my-16">
       {projects.map((project, index) => {
         console.log(project.icon); // Logs the icon for each project
         return (
@@ -52,6 +52,7 @@ const GitHubProjectsGrid: React.FC = () => {
                   alt={project.name}
                   width={24}
                   height={24}
+                  className="invert"
                 />
               )}
               <a

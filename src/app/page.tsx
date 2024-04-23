@@ -61,7 +61,7 @@ export default function Home() {
           <div className="m-2 font-inter font-medium underline text-2xl text-center md:text-3xl">
             <h1 className="opacity-50">languages and tools</h1>
 
-            <div className="fill-white grid grid-cols-5 justify-center gap-5 my-4">
+            <div className="scale-75 md:scale-100 fill-white grid grid-cols-5 justify-center gap-5 my-4">
               <div className={`p-4 ${hoverEffect} hover:scale-110`}>
                 <svg
                   role="img"
