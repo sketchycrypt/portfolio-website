@@ -13,7 +13,7 @@ To view the landing page, simply visit 🔗 [the website](https://skxtch.com)
 
 ## support
 
-if you have any questions or suggestions, please feel free to contact me at [sketchygfx@hotmail.com](mailto:contact@skxtch.com).
+if you have any questions or suggestions, please feel free to contact me at [contact@skxtch.com](mailto:contact@skxtch.com).
 
 ## license
 
