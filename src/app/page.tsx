@@ -50,7 +50,7 @@ export default function Home() {
           <h1 className="font-bold font-inter text-4xl text-center">skxtch</h1>
         </div>
         <div className="flex flex-col items-center justify-center mb-2 hover:transition ease-in-out duration-150 z-20">
-          <div className="mx-2 md:mx-0 font-inter font-medium text-2xl text-center md:text-4xl">
+          <div className="mx-2 md:mx-0 font-inter font-medium text-xl sm:text-2xl text-center md:text-4xl">
             <h1 className="opacity-75">
               I am a 17 year old from Morocco 🇲🇦
               <br />
@@ -122,7 +122,7 @@ export default function Home() {
             <div className="flex justify-center">
               <button
                 type="button"
-                className="text-white bg-navyblack hover:bg-navyblack/50 transition ease-in-out duration-150 font-medium rounded-full text-2xl px-6 py-3 me-2 mb-2 flex items-center"
+                className="text-white bg-navyblack hover:bg-navyblack/50 hover:scale-105 transition ease-in-out duration-150 font-medium rounded-full text-2xl px-6 py-3 me-2 mb-2 flex items-center"
                 onClick={() => window.location.href = 'mailto:contact@skxtch.com'}
                 >
                 <svg
