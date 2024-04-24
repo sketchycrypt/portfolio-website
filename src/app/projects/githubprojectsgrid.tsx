@@ -6,6 +6,7 @@ import tailwindIcon from "../images/icons/tailwindcss.svg";
 import javascriptIcon from "../images/icons/javascript.svg";
 import typescriptIcon from "../images/icons/typescript.svg";
 import nextdotjsIcon from "../images/icons/nextdotjs.svg";
+import githubIcon from "../images/icons/github.svg";
 
 interface GitHubProject {
   name: string;
@@ -38,26 +39,32 @@ const projects: GitHubProject[] = [
 
 const GitHubProjectsGrid: React.FC = () => {
   return (
-    <div className="scale-100 md:scale-150 text-center grid grid-cols-2 gap-4 mx-auto my-16">
+    <div className="scale-125 md:scale-150 text-center grid grid-cols-2 gap-8">
       {projects.map((project, index) => {
-        console.log(project.icon);
         return (
           <div
             key={index}
-            className="bg-black opacity-75 p-4 rounded-lg hover:opacity-100 -highlight transition ease-in-out duration-150">
+            className="bg-black opacity-100 p-4 rounded-lg hover:scale-105 border-2 border-white -highlight transition ease-in-out duration-150 relative w-full h-auto">
             <div className="flex items-center justify-start">
               {project.icon && (
                 <Image
                   src={project.icon.src}
                   alt={project.name}
-                  width={24}
-                  height={24}
-                  className="invert hover:scale-125 transition ease-in-out duration-150"
+                  width={11}
+                  height={11}
+                  className="absolute top-0 right-0 m-2 invert"
                 />
               )}
+              <Image
+                src={githubIcon}
+                alt={project.name}
+                width={24}
+                height={24}
+                className="invert"
+              />
               <a
                 href={project.url}
-                className="text-left text-xl md:text-2xl font-bold ml-4">
+                className="text-left text-lg font-bold ml-2">
                 {project.name}
               </a>
             </div>

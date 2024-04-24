@@ -20,7 +20,7 @@ export default function Home() {
     "opacity-25 hover:opacity-100 hover:transition ease-in-out duration-150";
 
   return (
-    <main>
+    <main className="overflow-hidden">
       <div
         id="bg-container"
         className="fixed z-0 w-full h-screen bg-no-repeat bg-center bg-cover opacity-45 blur-sm md:h-full">
@@ -35,7 +35,7 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="hover:transition ease-in-out duration-150 z-10">
-          <div className="flex flex-col items-start justify-center h-screen">
+          <div className="flex flex-col items-start justify-center h-screen scale-110">
             <GitHubProjectsGrid />
           </div>
         </div>
