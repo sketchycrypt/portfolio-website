@@ -53,7 +53,7 @@ export default function Home() {
 
       <div
         id="navigation-bar"
-        className="z-20 md:text-2xl fixed top-0 w-full flex justify-center items-end text-xl font-inter font-bold text-gray-300 text-center">
+        className="hover:cursor-pointer z-20 md:text-2xl fixed top-0 w-full flex justify-center items-end text-xl font-inter font-bold text-gray-300 text-center">
         <Link href="../">
           <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150">
             home
@@ -70,11 +70,11 @@ export default function Home() {
           </div>
         </Link>
 
-        <div
-          className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150"
-          onClick={() => alert("Not done yet")}>
-          socials
-        </div>
+        <Link legacyBehavior href="../socials">
+          <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150">
+            socials
+          </div>
+        </Link>
       </div>
     </main>
   );
