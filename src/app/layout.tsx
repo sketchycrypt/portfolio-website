@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "skxtch",
   description: "landing page",
+  openGraph: {
+    images: './images/picture.jpg'
+  },
 };
 
 export default function RootLayout({
