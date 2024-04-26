@@ -57,7 +57,7 @@ export default function Home() {
           mastodon
         </button>
         <button
-          className={`scale-125 md:scale-100 flex items-center justify-center bg-neutral-950 text-white px-6 py-4 text-lg rounded-full ${hoverEffect} z-20 w-48`} onClick={() => (window.location.href = "https://mastodon.social/@skxtch")}>
+          className={`scale-125 md:scale-100 flex items-center justify-center bg-neutral-950 text-white px-6 py-4 text-lg rounded-full ${hoverEffect} z-20 w-48`} onClick={() => (window.location.href = "https://github.com/sketchycrypt")}>
           <svg
             className="fill-white mr-2 w-8 h-8"
             role="img"
