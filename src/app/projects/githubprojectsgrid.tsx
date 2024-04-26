@@ -39,12 +39,12 @@ const projects: GitHubProject[] = [
 
 const GitHubProjectsGrid: React.FC = () => {
   return (
-    <div className="scale-125 md:scale-150 text-center grid grid-cols-2 gap-1 md:gap-8">
+    <div className="scale-150 md:scale-150 text-center grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-8">
       {projects.map((project, index) => {
         return (
           <div
             key={index}
-            className="scale-75 md:scale-100 bg-neutral-950 p-4 rounded-lg hover:scale-105 border-2 border-white -highlight transition ease-in-out duration-150 relative w-full h-auto">
+            className="scale-75 md:scale-100 bg-neutral-950 p-4 rounded-lg hover:scale-105 shadow-white/90 -highlight transition ease-in-out duration-150 relative w-full h-auto">
             <div className="flex items-center justify-start">
               {project.icon && (
                 <Image

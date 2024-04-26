@@ -59,20 +59,16 @@ export default function Home() {
             home
           </div>
         </Link>
-        <Link legacyBehavior href="https://github.com/sketchycrypt">
-          <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150">
-            github
-          </div>
-        </Link>
-        <Link legacyBehavior href="#">
+         
+        <Link legacyBehavior href="">
           <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150">
             projects
           </div>
         </Link>
 
-        <Link legacyBehavior href="../socials">
+        <Link legacyBehavior href="../links">
           <div className="md:m-8 m-4 hover:scale-110 transition ease-in-out duration-150">
-            socials
+            links
           </div>
         </Link>
       </div>
