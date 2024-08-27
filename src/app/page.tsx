@@ -52,7 +52,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center mb-2 hover:transition ease-in-out duration-150 z-20">
           <div className="mx-2 md:mx-0 font-inter font-medium text-xl sm:text-2xl text-center md:text-4xl">
             <h1 className="opacity-75">
-              I am a 17 year old from Morocco
+              I am an 18 year old from Morocco
               <br />
               who likes developing things for fun
               <br />
