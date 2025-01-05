@@ -7,6 +7,7 @@ import javascriptIcon from "../images/icons/javascript.svg";
 import typescriptIcon from "../images/icons/typescript.svg";
 import nextdotjsIcon from "../images/icons/nextdotjs.svg";
 import githubIcon from "../images/icons/github.svg";
+import bashIcon from "../images/icons/gnubash.svg";
 
 interface GitHubProject {
   name: string;
@@ -26,9 +27,9 @@ const projects: GitHubProject[] = [
     icon: javascriptIcon,
   },
   {
-    name: "crocrun",
-    url: "https://github.com/sketchycrypt/crocrun",
-    icon: typescriptIcon,
+    name: "searchenginebash",
+    url: "https://github.com/sketchycrypt/searchenginebash",
+    icon: bashIcon,
   },
   {
     name: "portfolio",
